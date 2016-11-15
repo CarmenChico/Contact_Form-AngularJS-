@@ -1,3 +1,23 @@
+
+
+#### Angular Like Button
+
+Objectives
+* //
+* //
+* Use : //
+
+
+
+We were asked to //
+![alt tag](https://tiy-learn-content.s3.amazonaws.com/e2bdd4d5-main.png)
+![alt tag](https://tiy-learn-content.s3.amazonaws.com/192525f1-errors.png)
+ - - - -
+
+#### Click the link to my [live Project](tiy-maria-del-carmenchico-angular_likes.surge.sh)
+
+tiy-maria-del-carmenchico-angular_likes.surge.sh  (link above sometimes does not work)
+
 # Installation
 
 #### Prerequisites
@@ -31,7 +51,7 @@ Finally, I would strongly encourage you to install the `newapp` script from [her
 3. Remove `git` from it `$ rm -rf .git`
 4. Initialize Git `$ git init`
 5. Install the dependencies `$ npm install`
-6. Build 
+6. Build
 
 
 # Features
