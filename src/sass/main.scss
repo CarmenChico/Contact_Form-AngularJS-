@@ -1,37 +1,20 @@
-@import 'bulma';
 
-
-// *{
-//   display: block;
-//   margin: 0;
-// }
 
 .container {
   // display: flex;
-  width: 45%;
+  width: 570px;
   margin: 15px auto;
 }
 form {
-    // height: 400px;
-    // display: flex;
-    // align-self: center;
-    // align-items: stretch;
-    // flex-direction: row;
-    // flex-shrink: 0;
-    // justify-content: center;
     border: 20px solid pink;
-    text-align: center;
     padding: 10px;
     background: silver;
-    // font-weight: normal;
-    // padding:20px;
         h1 {
           font-size: 30px;
           font-weight: bolder;
+          text-align: center;
         }
-      .label {
-        font-weight: normal;
-      }
+
 }
 
 
@@ -50,3 +33,14 @@ button {
   width:150px;
   font-size: larger;
 }
+span {
+  font-size: 10px;
+}
+.type-errors {
+  color: red;
+}
+input, textarea {
+  width: 500px;
+}
+
+@import "bulma"

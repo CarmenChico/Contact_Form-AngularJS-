@@ -19,29 +19,29 @@ $scope.validateName = function (name) {
   };
 };
 
-$scope.validateEmail = function (email) {
-  if (!email.includes('@')) {
-    $scope.errors.email = "Email must have/contain an '@'"
-    return false;
-  }
-  if (email === '') {
-    $scope.errors.email = "Email cannot be left empty"
-  }
-  return true;
-  };
-
-$scope.validateUrl = function (url) {
-  if (!url.startsWith('http')) {
-    $scope.errors.url = "Website must start with http://"
-    return false;
-  }
-
-  if (url === '') {
-    $scope.errors.url = '';
-  }
-  return true;
-};
-
+// $scope.validateEmail = function (email) {
+//   if (!email.includes('@')) {
+//     $scope.errors.email = "Email must have/contain an '@'";
+//     return false;
+//   }
+//   if (email === '') {
+//     $scope.errors.email = "Email cannot be left empty"
+//   }
+//   return true;
+//   };
+//
+// $scope.validateUrl = function (url) {
+//   if (!url.startsWith('http')) {
+//     $scope.errors.url = "Website must start with http://";
+//     return false;
+//   }
+//
+//   if (url === '') {
+//     $scope.errors.url = '';
+//   }
+//   return true;
+// // };
+//
 $scope.validateMssg = function (mssg) {
   if (mssg === '') {
     $scope.errors.mssg = "Message cannot be left empty"
@@ -49,7 +49,7 @@ $scope.validateMssg = function (mssg) {
 };
 
 $scope.addContact = function (contact) {
-    if ($scope.validateUrl(contact.url)) {
+    if ($scope.validateMssg(contact.mssgl)) {
         $http.post(URL, contact).then(function(resp) {
         let contact = resp.data;
         $scope.contacts.push(contact);
@@ -57,21 +57,21 @@ $scope.addContact = function (contact) {
   });
   // if ($scope.validateName(contact.name)) {
 // }
-}
-console.log("hello from addContact function");
+// }
+// console.log("hello from addContact function");
 };
-
-$scope.delteMe = function (contact) {
-  $http.delete(URL + contact_id).then(function (resp) {
-    console.log(resp);
-    $scope.contacts = $scope.contacts.filter(function(x) {
-        return x._id !== contact._id;
-    });
-//  $scope.contacts = $scope.contacts.filter(x ==> x._id !== contact._id);
-
-  })
-
-}
+console.log($scope.addContact);
+// $scope.delteMe = function (contact) {
+//   $http.delete(URL + contact_id).then(function (resp) {
+//     console.log(resp);
+//     $scope.contacts = $scope.contacts.filter(function(x) {
+//         return x._id !== contact._id;
+//     });
+// //  $scope.contacts = $scope.contacts.filter(x ==> x._id !== contact._id);
+//
+//   })
+//
+// }
 
 };
 

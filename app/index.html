@@ -13,32 +13,33 @@
       <form ng-submit="addContact(contact)">
           <h1>... who, are you? </h1>
         <label class="label">Name</label>
-        <p>
+        <p class="control">
           <input type="text" placeholder="...name required"
                   ng-model="contact.name" ng-keypress="validateName(contact.name)" />
           <span class="type-errors" >{{ errors.name }}</span>
         </p>
         <label class="label">Email</label>
-        <p>
-          <input type="text" placeholder="email required.....iebilly@bob.com"
+        <p class="control">
+          <input type="text" placeholder="email required.....(ie'billy@bob.com')"
                   ng-model="contact.email" ng-keypress="validateEmail(contact.email)" />
           <span class="type-errors" >{{ errors.email }}</span>
         </p>
         <label class="label">Website</label>
-        <p>
+        <p class="control">
           <input type="text" placeholder="http:// ... web address"
                   ng-model="contact.url" ng-keypress="validateUrl(contact.url)" />
           <span class="type-errors" >{{ errors.url }}</span>
 
         </p>
         <label class="label">Message</label>
-        <p>
+        <p class="control">
           <textarea type="text" cols="30" rows="5" placeholder="A friendly message..."
                   ng-model="contact.mssg" ng-keypress="validateMssg(contact.mssg)" /></textarea>
         <span class="type-errors" >{{ errors.mssg }}</span>
         </p>
         <p>
           <button type="button">Submit</button>
+          <!-- <button class="button is-primary" type="button">Submit</button> -->
         </p>
 
       </form>
