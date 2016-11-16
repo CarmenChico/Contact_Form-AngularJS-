@@ -9,27 +9,36 @@
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
   </head>
   <body ng-app="app">
-    <div class="container" ng-controller="MainController">
-      <form>
+    <div class="container" ng-controller="FormController">
+      <form ng-submit="addContact(contact)">
           <h1>... who, are you? </h1>
         <label class="label">Name</label>
         <p>
-          <input type="text">
+          <input type="text"
+                  ng-model="contact.name" ng-keypress="validateName(contact.name)" />
+          <span class="type-errors" >{{ errors.name }}</span>
         </p>
         <label class="label">Email</label>
         <p>
-          <input type="text">
+          <input type="text"
+                  ng-model="contact.email" ng-keypress="validateEmail(contact.email)" />
+          <span class="type-errors" >{{ errors.email }}</span>
         </p>
         <label class="label">Website</label>
         <p>
-          <input type="text">
+          <input type="text"
+                  ng-model="contact.url" ng-keypress="validateUrl(contact.url)" />
+          <span class="type-errors" >{{ errors.url }}</span>
+
         </p>
         <label class="label">Message</label>
         <p>
-          <textarea type="text" cols="30" rows="5"></textarea>
+          <textarea type="text" cols="30" rows="5" placeholder="A friendly message..."
+                  ng-model="contact.mssg" ng-keypress="validateMssg(contact.mssg)" /></textarea>
+        <span class="type-errors" >{{ errors.mssg }}</span>
         </p>
         <p>
-          <button type="button" name="button">Submit</button>
+          <button type="button">Submit</button>
         </p>
 
       </form>
