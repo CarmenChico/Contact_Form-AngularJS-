@@ -38,22 +38,27 @@
         <span class="type-errors" >{{ errors.mssg }}</span>
         </p>
         <p>
-          <button type="button">Submit</button>
+          <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
+          <input type="submit" id="submit" value="submit"  ng-disabled="validateForm()"/>
+          <!-- <input type="button" name="name" value="submit" /> -->
+          <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
           <!-- <button class="button is-primary" type="button">Submit</button> -->
         </p>
 
       </form>
 
-      <h2>These are your new contacts: </h2>
-      <ul>
-        <li ng-repeat="contact in contacts">
-          <h3>{{ contact.name }} </h3>
-          <span> {{ contact.email }} | </span> <span> {{ contact.url }} | </span> <br>
-          <span>{{ contact.mssg }}</span>
-          <button type="button" name="button"
-                  ng-click="deleteMe(contact)">Delete!</button>
-        </li>
-      </ul>
+      <div class="storedContacts">
+        <h2>These are your new contacts: </h2>
+        <ul>
+          <li ng-repeat="contact in contacts">
+            <h3>{{ contact.name }} </h3>
+            <span> {{ contact.email }} | </span> <span> {{ contact.url }} | </span>
+            <span>{{ contact.mssg }}</span>
+            <button ng-click="deleteMe(contact)">Delete!</button>
+          </li>
+        </ul>
+      </div>
+
     </div>
     <script src="js/bundle.js"></script>
   </body>
