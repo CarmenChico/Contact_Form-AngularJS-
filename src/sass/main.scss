@@ -1,23 +1,31 @@
-
+@import "bulma";
 
 .container {
   // display: flex;
-  width: 570px;
-  margin: 15px auto;
+  width: 100%;
+  margin: 35px auto;
 }
+h1 {
+  font-size: 66px;
+  font-weight: bolder;
+  text-align: center;
+  margin:20px;
+  font-family: 'Pacifico', cursive;
+}
+
 form {
     border: 20px solid pink;
     padding: 10px;
     background: silver;
-        h1 {
-          font-size: 30px;
-          font-weight: bolder;
-          text-align: center;
-        }
-
+    width: 40%;
+}
+p.submit {
+  display: flex;
+  justify-content: center;
 }
 
-button.primary:hover {
+
+#submit:hover {
   color:black;
   border:1px solid pink;
   // border:1px solid #0090c0;
@@ -25,10 +33,10 @@ button.primary:hover {
   // background-color: #ece9e9
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
-button.primary {
+#submit{
   color: grey;
   margin: 5px;
-  height: 80px;
+  height: 50px;
   width:150px;
   font-size: larger;
 }
@@ -39,7 +47,64 @@ span {
   color: red;
 }
 input, textarea {
-  width: 500px;
+  width: 400px;
+}
+.button {
+  color: grey;
+  height: 15px;
+  width:24px;
+  font-size: 6px;
+  padding: 0;
+}
+.hide {
+  visibility: hidden;
+}
+li:hover {
+  .hide {
+    visibility: visible;
+  }
 }
 
-@import "bulma"
+.button:hover {
+  color: #d20a0a;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(171, 31, 31, 0.4);
+    height: 30px;
+    width: 50px;
+    border: none;
+    transition: 0.5s;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.storedContacts {
+  display: flex;
+  flex-direction: column;
+  padding-top:50px;
+    h2 {
+      font-size: 25px;
+      font-weight: bolder;
+      i {
+        font-size: 15px;
+      }
+    }
+}
+img.icon {
+  height: 20px;
+  width: 20px;
+}
+
+li {
+  padding-top: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+
+  .LargeImg {
+    background: silver;
+    border: 20px solid pink;
+    padding: 10px;
+  }
+}
