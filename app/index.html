@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9752;CC's Contact Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  </head>
   <body ng-app="app">
     <div class="container" ng-controller="MainController">
-      <form class="form">
+      <form>
+          <h1>... who, are you? </h1>
         <label class="label">Name</label>
         <p>
           <input type="text">
@@ -17,11 +25,14 @@
           <input type="text">
         </p>
         <label class="label">Message</label>
-          <p>
-            <input type="text" >
-          </p>
+        <p>
+          <textarea type="text" cols="30" rows="5"></textarea>
+        </p>
+        <p>
+          <button type="button" name="button">Submit</button>
+        </p>
+
       </form>
-      <p>Carmen Chico</p>
     </div>
     <script src="js/bundle.js"></script>
   </body>

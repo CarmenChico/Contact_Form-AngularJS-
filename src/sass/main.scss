@@ -1,11 +1,52 @@
 @import 'bulma';
-// 
-//
-// .container {
-//   width: 75%;
-//   margin:50px auto;
-//
+
+
+// *{
+//   display: block;
+//   margin: 0;
 // }
-// form.form {
-//   margin-left:45%;
-// }
+
+.container {
+  // display: flex;
+  width: 45%;
+  margin: 15px auto;
+}
+form {
+    // height: 400px;
+    // display: flex;
+    // align-self: center;
+    // align-items: stretch;
+    // flex-direction: row;
+    // flex-shrink: 0;
+    // justify-content: center;
+    border: 20px solid pink;
+    text-align: center;
+    padding: 10px;
+    background: silver;
+    // font-weight: normal;
+    // padding:20px;
+        h1 {
+          font-size: 30px;
+          font-weight: bolder;
+        }
+      .label {
+        font-weight: normal;
+      }
+}
+
+
+button:hover {
+  color:black;
+  border:1px solid pink;
+  // border:1px solid #0090c0;
+  background-color: #f8f8f8;
+  // background-color: #ece9e9
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+button {
+  color: grey;
+  margin: 5px;
+  height: 80px;
+  width:150px;
+  font-size: larger;
+}
