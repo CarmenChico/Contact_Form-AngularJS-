@@ -10,51 +10,59 @@
   </head>
   <body ng-app="app">
     <div class="container" ng-controller="FormController">
-      <form ng-submit="addContact(contact)">
-          <h1>... who, are you? </h1>
-        <label class="label">Name</label>
-        <p class="control">
-          <input type="text" placeholder="...name required"
-                  ng-model="contact.name" ng-keypress="validateName(contact.name)" />
-          <span class="type-errors" >{{ errors.name }}</span>
-        </p>
-        <label class="label">Email</label>
-        <p class="control">
-          <input type="text" placeholder="email required.....(ie'billy@bob.com')"
-                  ng-model="contact.email" ng-keypress="validateEmail(contact.email)" />
-          <span class="type-errors" >{{ errors.email }}</span>
-        </p>
-        <label class="label">Website</label>
-        <p class="control">
-          <input type="text" placeholder="http:// ... web address"
-                  ng-model="contact.url" ng-keypress="validateUrl(contact.url)" />
-          <span class="type-errors" >{{ errors.url }}</span>
+      <h1>Nice to Meet You</h1>
+      <div class="flex">
+        <form ng-submit="addContact(contact)">
 
-        </p>
-        <label class="label">Message</label>
-        <p class="control">
-          <textarea type="text" cols="30" rows="5" placeholder="A friendly message..."
-                  ng-model="contact.mssg" ng-keypress="validateMssg(contact.mssg)" /></textarea>
-        <span class="type-errors" >{{ errors.mssg }}</span>
-        </p>
-        <p>
-          <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
-          <input type="submit" id="submit" value="submit"  ng-disabled="validateForm()"/>
-          <!-- <input type="button" name="name" value="submit" /> -->
-          <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
-          <!-- <button class="button is-primary" type="button">Submit</button> -->
-        </p>
+          <label class="label">Name</label>
+          <p class="control">
+            <input type="text" placeholder="...name required"
+                    ng-model="contact.name" ng-keypress="validateName(contact.name)" />
+            <span class="type-errors" >{{ errors.name }}</span>
+          </p>
+          <label class="label">Email</label>
+          <p class="control">
+            <input type="text" placeholder="email required.....(ie'billy@bob.com')"
+                    ng-model="contact.email" ng-keypress="validateEmail(contact.email)" />
+            <span class="type-errors" >{{ errors.email }}</span>
+          </p>
+          <label class="label">Website</label>
+          <p class="control">
+            <input type="text" placeholder="http:// ... web address"
+                    ng-model="contact.url" ng-keypress="validateUrl(contact.url)" />
+            <span class="type-errors" >{{ errors.url }}</span>
 
-      </form>
+          </p>
+          <label class="label">Message</label>
+          <p class="control">
+            <textarea type="text" cols="30" rows="5" placeholder="A friendly message..."
+                    ng-model="contact.mssg" ng-keypress="validateMssg(contact.mssg)" /></textarea>
+          <span class="type-errors" >{{ errors.mssg }}</span>
+          </p>
+          <p class="submit">
+            <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
+
+            <input type="submit" id="submit" value="submit"  ng-disabled="validateForm()"/>
+
+            <!-- <input type="button" name="name" value="submit" /> -->
+            <!-- <button class="primary" ng-disabled="validateForm()">Submit</button> -->
+            <!-- <button class="button is-primary" type="button">Submit</button> -->
+          </p>
+
+        </form>
+        <img class="LargeImg" src="http://cdn4.gurl.com/wp-content/uploads/2014/04/wreck-it-ralph-handshake.gif" />
+      </div>
+
 
       <div class="storedContacts">
-        <h2>These are your new contacts: </h2>
+        <h2>New Contacts: </h2>
         <ul>
           <li ng-repeat="contact in contacts">
             <h3>{{ contact.name }} </h3>
-            <span> {{ contact.email }} | </span> <span> {{ contact.url }} | </span>
-            <span>{{ contact.mssg }}</span>
-            <button ng-click="deleteMe(contact)">Delete!</button>
+            <i><img class="icon" src="http://www.freeiconspng.com/uploads/communication-email-2-icon-7.png" alt="email"/></i><span> {{ contact.email }} </span> <span><i><img class="icon" src="http://149.132.37.158/sites/all/images/geospatial.png" alt="website"/></i> {{ contact.url }}</span>
+            <i><img class="icon" src="http://findicons.com/files/icons/2028/fire_toolbar/256/notes.png" alt="message"/></i><span>{{ contact.mssg }}</span>
+            <input class="button hide" id="unhide" value="Delete!"ng-click="deleteMe(contact)">
+            <!-- <button ng-click="deleteMe(contact)">Delete!</button> -->
           </li>
         </ul>
       </div>
