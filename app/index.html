@@ -14,19 +14,19 @@
           <h1>... who, are you? </h1>
         <label class="label">Name</label>
         <p>
-          <input type="text"
+          <input type="text" placeholder="...name required"
                   ng-model="contact.name" ng-keypress="validateName(contact.name)" />
           <span class="type-errors" >{{ errors.name }}</span>
         </p>
         <label class="label">Email</label>
         <p>
-          <input type="text"
+          <input type="text" placeholder="email required.....iebilly@bob.com"
                   ng-model="contact.email" ng-keypress="validateEmail(contact.email)" />
           <span class="type-errors" >{{ errors.email }}</span>
         </p>
         <label class="label">Website</label>
         <p>
-          <input type="text"
+          <input type="text" placeholder="http:// ... web address"
                   ng-model="contact.url" ng-keypress="validateUrl(contact.url)" />
           <span class="type-errors" >{{ errors.url }}</span>
 
@@ -46,8 +46,8 @@
       <h2>These are your new contacts: </h2>
       <ul>
         <li ng-repeat="contact in contacts">
-          <h3>{{ contact.name }}</h3>
-          <span>{{ contact.email }} | </span> <span> {{ contact.url }} | </span> <br>
+          <h3>{{ contact.name }} </h3>
+          <span> {{ contact.email }} | </span> <span> {{ contact.url }} | </span> <br>
           <span>{{ contact.mssg }}</span>
           <button type="button" name="button"
                   ng-click="deleteMe(contact)">Delete!</button>

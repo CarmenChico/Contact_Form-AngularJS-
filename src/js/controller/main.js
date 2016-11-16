@@ -5,7 +5,7 @@ function FormController ($scope, $http) {
       $scope.errors = {};
 
 function init() {
-  $http.get(URL).then(function(resp){
+  $http.get(URL).then(function (resp){
       console.log(resp.data);
       $scope.contacts = resp.data;
   });
@@ -13,13 +13,13 @@ function init() {
 
 init();
 
-$scope.validateName = function(name) {
+$scope.validateName = function (name) {
   if (name === '') {
     $scope.errors.name = "Name cannot be left empty"
   };
 };
 
-$scope.validateEmail = function(email) {
+$scope.validateEmail = function (email) {
   if (!email.includes('@')) {
     $scope.errors.email = "Email must have/contain an '@'"
     return false;
@@ -30,7 +30,7 @@ $scope.validateEmail = function(email) {
   return true;
   };
 
-$scope.validateUrl = function(url) {
+$scope.validateUrl = function (url) {
   if (!url.startsWith('http')) {
     $scope.errors.url = "Website must start with http://"
     return false;
@@ -42,13 +42,13 @@ $scope.validateUrl = function(url) {
   return true;
 };
 
-$scope.validateMssg = function(mssg) {
+$scope.validateMssg = function (mssg) {
   if (mssg === '') {
     $scope.errors.mssg = "Message cannot be left empty"
   };
 };
 
-$scope.addContact = function(contact) {
+$scope.addContact = function (contact) {
     if ($scope.validateUrl(contact.url)) {
         $http.post(URL, contact).then(function(resp) {
         let contact = resp.data;
@@ -61,7 +61,7 @@ $scope.addContact = function(contact) {
 console.log("hello from addContact function");
 };
 
-$scope.delteMe = function(contact) {
+$scope.delteMe = function (contact) {
   $http.delete(URL + contact_id).then(function (resp) {
     console.log(resp);
     $scope.contacts = $scope.contacts.filter(function(x) {
