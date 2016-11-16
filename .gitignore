@@ -9,3 +9,6 @@ app/js/bundle.js
 app/js/bundle.js.map
 
 src/js/sample.js
+
+src/js/controller/formTRY.js
+src/js/controller/otherForm.js
