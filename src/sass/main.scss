@@ -17,8 +17,7 @@ form {
 
 }
 
-
-button:hover {
+button.primary:hover {
   color:black;
   border:1px solid pink;
   // border:1px solid #0090c0;
@@ -26,7 +25,7 @@ button:hover {
   // background-color: #ece9e9
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
-button {
+button.primary {
   color: grey;
   margin: 5px;
   height: 80px;
