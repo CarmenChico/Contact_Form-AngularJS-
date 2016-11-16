@@ -15,10 +15,10 @@ function init() {
 init();
 
 $scope.validateForm = function() {
-        console.log($scope.validateName($scope.contact.name))
-        console.log($scope.validateEmail($scope.contact.email))
-        console.log($scope.validateUrl($scope.contact.url))
-        console.log($scope.validateMssg($scope.contact.mssg))
+        // console.log($scope.validateName($scope.contact.name))
+        // console.log($scope.validateEmail($scope.contact.email))
+        // console.log($scope.validateUrl($scope.contact.url))
+        // console.log($scope.validateMssg($scope.contact.mssg))
     if ( ($scope.validateName($scope.contact.name))&&
         ($scope.validateEmail($scope.contact.email))&&
         ($scope.validateUrl($scope.contact.url))&&
@@ -83,7 +83,8 @@ $scope.addContact = function (contact) {
         $http.post(URL, contact).then(function(resp) {
           let contact = resp.data;
           $scope.contacts.unshift(contact);
-            // $scope.contacts.push(contact);
+          $scope.contact = {};
+            // $scope.contacts.push(contact); //sends the inserted data to the bottom of the page
         });
 };
 
