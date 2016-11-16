@@ -49,16 +49,29 @@ $scope.validateMssg = function(mssg) {
 };
 
 $scope.addContact = function(contact) {
-  $http.post(URL, contact).then(function (resp) {
-    let contact = resp.data;
-    $scope.contacts.push(contact);
-    console.log($scope.contacts);
+    if ($scope.validateUrl(contact.url)) {
+        $http.post(URL, contact).then(function(resp) {
+        let contact = resp.data;
+        $scope.contacts.push(contact);
+        console.log($scope.contacts);
   });
   // if ($scope.validateName(contact.name)) {
 // }
+}
 console.log("hello from addContact function");
 };
 
+$scope.delteMe = function(contact) {
+  $http.delete(URL + contact_id).then(function (resp) {
+    console.log(resp);
+    $scope.contacts = $scope.contacts.filter(function(x) {
+        return x._id !== contact._id;
+    });
+//  $scope.contacts = $scope.contacts.filter(x ==> x._id !== contact._id);
+
+  })
+
+}
 
 };
 

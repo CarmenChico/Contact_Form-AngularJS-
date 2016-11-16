@@ -42,6 +42,17 @@
         </p>
 
       </form>
+
+      <h2>These are your new contacts: </h2>
+      <ul>
+        <li ng-repeat="contact in contacts">
+          <h3>{{ contact.name }}</h3>
+          <span>{{ contact.email }} | </span> <span> {{ contact.url }} | </span> <br>
+          <span>{{ contact.mssg }}</span>
+          <button type="button" name="button"
+                  ng-click="deleteMe(contact)">Delete!</button>
+        </li>
+      </ul>
     </div>
     <script src="js/bundle.js"></script>
   </body>
