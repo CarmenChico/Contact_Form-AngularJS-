@@ -60,7 +60,7 @@
         <ul>
           <li ng-repeat="contact in contacts">
             <h3>{{ contact.name }} </h3>
-            <i><img class="icon" src="http://www.freeiconspng.com/uploads/communication-email-2-icon-7.png" alt="email"/></i><span> {{ contact.email }} </span> <span><i><img class="icon" src="http://149.132.37.158/sites/all/images/geospatial.png" alt="website"/></i> {{ contact.url }}</span>
+            <i><img class="icon" src="http://www.freeiconspng.com/uploads/communication-email-2-icon-7.png" alt="email"/></i><span><a href="#">{{ contact.email }}</a>  </span> <span><i><img class="icon" src="http://149.132.37.158/sites/all/images/geospatial.png" alt="website"/></i><a href="{{ contact.url }}">{{ contact.url }}</a> </span>
             <i><img class="icon" src="http://findicons.com/files/icons/2028/fire_toolbar/256/notes.png" alt="message"/></i><span>{{ contact.mssg }}</span>
             <input class="button hide" id="unhide" value="Delete!"ng-click="deleteMe(contact)">
             <!-- <button ng-click="deleteMe(contact)">Delete!</button> -->
